@@ -47,14 +47,8 @@ function buildBLT (ingredients){
     }
     else{
         $('#sandwichResults').empty();
-        el.append("<p id='result0'> YOUR SANDWICH INCLUDES:</p>" + ingredientsDisplay.join( ', '));
-        el.append("<p id='result'> YOUR BLT SANDWICH NEEDS HELP. TRY AGAIN! <br><p id='result2'> BLT sandwiches need at least two pieces of bread, bacon, lettuce and tomatoes.</p>");
+        el.append("<p id='result2'> YOUR SANDWICH INCLUDES:</p>" + ingredientsDisplay.join( ', '));
+        el.append("<p id='result3'> YOUR BLT SANDWICH NEEDS HELP. TRY AGAIN!</p> <br><span style='background-color: #FFFF00'>BLT sandwiches need at least two pieces of bread, bacon, lettuce and tomatoes.</span>");
     }
     return realSandwich
 }; // end buildBLT function
-
-// buildBLT(['bread', 'lettuce', 'bacon', 'tomatoes', 'bread']) // expect true
-// buildBLT(['bread', 'lettuce', 'bacon', 'tomatoes']) // expect false
-// buildBLT(['lettuce', 'bacon', 'tomatoes', 'bread']) // expect false
-// buildBLT(['bread', 'lettuce', 'bacon', 'tomatoes', 'celery', 'kiwi', 'kimchee','bread']) // expect true
-// buildBLT(['bread', 'lettuce', 'tomatoes', 'bread']) // expect false
